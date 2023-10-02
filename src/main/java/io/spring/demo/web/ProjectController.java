@@ -54,11 +54,5 @@ public class  ProjectController {
         return new ResponseEntity<String>("Project with ID: '"+projectId+"' deleted Successfully", HttpStatus.OK);
     }
 
-    @PutMapping("/update")
-    public ResponseEntity<?> updateProject(@Valid @RequestBody Project project){
-        Project project1 = projectService.UpdateProject(project);
-        return new ResponseEntity<Project>(project, HttpStatus.OK);
-    }
-
 
 }
